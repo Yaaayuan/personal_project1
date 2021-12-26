@@ -17,9 +17,11 @@
             position: sticky;
             top: 0;
             left: 0;
-            background-color: #ffffff;   
+            background-color: #ffffff;
+            z-index: 100;
+            padding:0 10px;
+            box-sizing: border-box; 
         }
-    
         .menubox{
             width: 50px;
             height: 50px;
@@ -104,15 +106,18 @@
             align-items: center;
             /* position: fixed; */
         }
-        #cart{
+        .search_cart a img{
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .search_cart a{
             height: 50%;
-           
         }
         #search{
             height: 40%;
             padding: 0 20px;
         }
-         /* font */
+        /* font */
         body{
             color:#555;
             line-height: 1.5;
@@ -124,17 +129,17 @@
         }
         h2{
             font-size:20px;
-        }
+        } 
         /* body */
         .path{
             padding: 20px;
         }
         .introduce{
-            padding: 20px;
+            padding: 20px 10px;
             margin: auto;
         }
         .intro_col{
-            padding: 0 0 0 10px;
+            padding: 0;
         }
         .intro_col_txt{
             padding: 0 10px 0 0;
@@ -213,19 +218,16 @@
                 </a>
                 <ul>
                     <li>
-                        <a href="all product.html">產品總覽</a>
+                        <a href="index.html">首頁</a>
                     </li>
                     <li>
-                        <a href="product.html">產品資訊</a>
+                        <a href="all product.html">商品總覽</a>
                     </li>
                     <li>
                         <a href="member.html">會員中心</a>
                     </li>
                     <li>
                         <a href="article.html">一點甜專欄</a>
-                    </li>
-                    <li>
-                        <a href="about_us.html">關於我們</a>
                     </li>
                 </ul>
             </li>  

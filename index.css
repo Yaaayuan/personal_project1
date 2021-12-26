@@ -19,7 +19,9 @@
     top: 0;
     left: 0;
     background-color: #ffffff;
-    z-index: 20; 
+    z-index: 20;
+    padding:0 10px 0 0;
+    box-sizing: border-box; 
       
 }
 .menubox{
@@ -176,7 +178,12 @@ nav:hover {
 }
 /* banner */
 .banner{
+    width: 100%;
     margin-bottom: 50px;
+    box-sizing: border-box;
+}
+.banner img{
+    width: 100%;
 }
 /* 精選特輯 */
 h1{
