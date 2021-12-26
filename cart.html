@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一點甜 About us</title>
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        /* header */
+        body{
+            color:#555;
+        }
+        h2{
+            font-size:20px;
+        }
+        .header{   
+            width: 100%;
+            height:65px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #ffffff; 
+            z-index: 20;   
+        }
+        .menubox{
+            width: 50px;
+            height: 50px;
+            display: inline-block; 
+        }
+        .menu{
+            width:30px;
+            height: 6px;
+            background-color: #B87A3D;
+            box-shadow: 0px 11px 0px 0px #B87A3D,
+            0px -11px 0px 0px #B87A3D;
+            margin-top: 25px; 
+        }
+        .logo{
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 41%;
+        }
+        .logo img{
+            height: 100%;  
+            /* padding-left: 90px; */
+            padding: 5px 0 5px 0px ;
+            box-sizing: border-box;
+        }
+        .search_cart{
+            height: 100%;
+            display: flex;    
+            align-items: center;
+            /* position: fixed; */
+        }
+        #cart{
+            height: 50%;
+           
+        }
+        #search{
+            height: 40%;
+            padding: 0 20px;
+        } 
+        /* body */
+        .path{
+            padding: 20px;
+        }
+        h1{
+            text-align: center;
+            padding: 20px;
+            font-size: 28px;
+        }
+        .cart_list{
+            width: 80%;
+            margin: auto;
+        }
+        .cart_list_txt{
+            width: 100%;
+            /* margin: auto; */
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            box-sizing: border-box;            
+        }
+        .wrap{
+            position: relative;
+        }
+        .product_pic{
+            width: 15%;
+            box-sizing: border-box;
+        }
+        .product_pic img{
+            width: 100%;
+            vertical-align: middle;
+        }
+        .product_name{
+            width: 30%;
+            margin: 0 10px;
+        }
+        .product_amount{
+            width: 30%;
+            padding:0  10px;
+            box-sizing: border-box;
+            height: 32px;
+        }
+        .amount_btn{
+            text-align: center;
+            font-size: 20px;
+            width: 
+            30px;
+            height:100%;
+            color: #B87A3D;
+            vertical-align: top;
+        }
+        .amount_txt{
+            height: 90%;
+            text-align: center;
+            width: 120px;
+        }
+        .price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #B87A3D;padding:0 10px;
+        }
+        .close_icon{
+            width: 15px;
+            padding:0 0 0 20px;
+        }
+        .close_icon img{
+            width: 100%;
+            vertical-align: middle;
+        }
+        .box{
+            display: flex;
+            justify-content: space-between;
+            padding:20px 0;
+        }
+        .next_icon{
+            width: 15px;
+        }
+        .next_icon img{
+            width: 100%;
+            vertical-align: middle;
+        }
+        .total{
+            padding: 20px 0;
+        }
+        .total_price p{
+            font-size: 28px;
+            font-weight: bolder;
+            color: #B87A3D;
+        }
+        .btn_group{
+            display: flex;
+            justify-content: flex-end;
+            padding:0 0 20px 0;
+        }
+        .pay_later_btn{
+            color: #B87A3D;
+            font-weight: bolder;
+            border:2px solid #B87A3D;
+            padding: 10px;
+            margin: 0 20px;
+            font-size: 18px;
+        }
+        .pay_now_btn{
+            background-color: #B87A3D;
+            /* font-weight: bolder; */
+            color: #ffffff;
+            border:2px solid #B87A3D;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        /* 格線 */
+        hr{
+            margin: 10px 0;
+        }
+        /* footer */
+        .footer{
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            background-color: #ecd1b6;
+            box-sizing: border-box;
+
+        }
+        .socialmedia_wrap{
+            display: flex;
+            margin: 10px 0;
+            justify-content: center;
+        }
+        .socialmedia_col{
+            width: 50px;
+            padding:0 20px;
+        }
+        .socialmedia_col img{
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 300px;
+        }
+        .shortcut-text a{
+            color: #000000;
+        }
+        .shortcut-text{
+            margin:20px 0;
+        }
+        
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+       <!--head-->
+       <div class="header">
+            <div class="menubox">
+                <div class="menu"></div>
+            </div>
+            <div class="logo"><img src="pic/logo_name_official.png" alt="logo"></div>
+            <div class="search_cart">
+                <img src="pic/search_left.png" alt="search" id="search">
+                <img src="pic/shopping-cart.png" alt="shopping-cart" id="cart">
+            </div>
+        </div>
+    <!-- body -->
+    <div class="path"><p>首頁/購物車</p></div>
+    <h1>購物車明細</h1>
+    <div class="wrap">
+            <div class="cart_list">
+                <div class="cart_list_txt">
+                    <div class="product_pic">
+                        <img src="pic/檸檬奶霜可麗露.png" alt="">
+                    </div>
+                    <div class="product_name">
+                        <h2>檸檬奶霜可麗露</h2>
+                        <p>貳玖甜室</p>
+                    </div>
+                    <div class="product_amount">
+                        <button class="amount_btn">-</button><input type="text" class="amount_txt" placeholder="1"><button class="amount_btn">+</button>
+                    </div>
+                    <div class="price">
+                        <p>$100</p>
+                    </div>
+                    <div class="close_icon">
+                        <img src="pic/black_close.png" alt="">
+                    </div>
+                </div>
+                <hr>
+                <div class="cart_list_txt">
+                    <div class="product_pic">
+                        <img src="pic/鹹蛋黃可麗露.PNG">
+                    </div>
+                    <div class="product_name">
+                        <h2>鹹蛋黃可麗露</h2>
+                        <p>貳玖甜室</p>
+                    </div>
+                    <div class="product_amount">
+                        <button class="amount_btn">-</button><input type="text" class="amount_txt" placeholder="1"><button class="amount_btn">+</button>
+                    </div>
+                    <div class="price">
+                        <p>$90</p>
+                    </div>
+                    <div class="close_icon">
+                        <img src="pic/black_close.png" alt="">
+                    </div>
+                </div>
+                <hr>
+                <div class="cart_list_txt">
+                    <div class="product_pic">
+                        <img src="pic/hot_product/hot3.png">
+                    </div>
+                    <div class="product_name">
+                        <h2>鮮草莓生乳達克瓦茲</h2>
+                        <p>一些甜點</p>
+                    </div>
+                    <div class="product_amount">
+                        <button class="amount_btn">-</button><input type="text" class="amount_txt" placeholder="1"><button class="amount_btn">+</button>
+                    </div>
+                    <div class="price">
+                        <p>$150</p>
+                    </div>
+                    <div class="close_icon">
+                        <img src="pic/black_close.png" alt="">
+                    </div>
+                </div>
+                <hr>
+                <div class="box discount">
+                    <div class="discount_txt">
+                        <h2>使用折扣碼</h2>
+                    </div>
+                    <div class="next_icon">
+                        <img src="pic/next.png" alt="">
+                    </div>
+                </div>
+                <hr>
+                <div class="box delivery">
+                    <div class="delivery_txt">
+                        <h2>物流選擇</h2>
+                    </div>
+                    <div class="next_icon">
+                        <img src="pic/next.png" alt="">
+                    </div>
+                </div>
+                <hr>
+                <div class="box total">
+                    <div class="total_txt">
+                        <h2>訂單總額(含運)</h2>
+                    </div>
+                    <div class="total_price">
+                        <p>$340</p>
+                    </div>
+                </div>
+                <div class="btn_group">
+                    <div class="pay_later">
+                        <button class="pay_later_btn">繼續選購</button>
+                    </div>
+                    <div class="pay_now">
+                        <button class="pay_now_btn">結帳</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- footer -->
+    <div class="footer">
+        <div class="socialmedia_wrap">
+            <div class="socialmedia_col">
+                <a href="#"><img src="pic/facebook.png" alt="facebook"></a>
+            </div>
+            <div class="socialmedia_col">
+                <a href="#"><img src="pic/instagram.png" alt="ig"></a>
+            </div>
+            <div class="socialmedia_col">
+                <a href="#"><img src="pic/line.png" alt="line"></a>
+            </div>
+        </div>
+        <div class="shortcut-text">
+            <a href="##">關於我們</a>｜
+            <a href="##">常見問題</a>｜
+            <a href="##">購物說明</a>｜
+            <a href="##">聯繫我們</a>
+        </div>
+        <div class="copy-right">
+            <span>食品業者登錄字號：A-11212560-00123-1</span>
+            <p>Copyright © 2021 (非營利，僅供學術交流使用) All Rights Reserved</p>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

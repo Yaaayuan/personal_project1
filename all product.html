@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一點甜(商品一覽)</title>
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        .header{   
+            width: 100%;
+            height:65px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;   
+        }
+    
+        .menubox{
+            width: 50px;
+            height: 50px;
+            display: inline-block; 
+        }
+        .menu{
+            width:30px;
+            height: 6px;
+            background-color: #B87A3D;
+            box-shadow: 0px 11px 0px 0px #B87A3D,
+            0px -11px 0px 0px #B87A3D;
+            margin-top: 25px; 
+        }
+        /* menu下拉選單*/
+        ul { /* 取消ul預設的內縮及樣式 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul.drop-down-menu {
+            display: inline-block;
+            font-family: 'Open Sans', Arial, sans-serif;
+        }
+        ul.drop-down-menu li {
+            position: relative;
+            white-space: nowrap;
+        }
+        ul.drop-down-menu > li:last-child {
+            border-right: none;
+        }
+        ul.drop-down-menu > li {
+            float: left; /* 只有第一層是靠左對齊*/
+        }
+
+        ul.drop-down-menu a {
+            background-color: #fff;
+            color: #333;
+            display: block;
+            padding-left: 20px;
+            text-decoration: none;
+            line-height: 40px;
+        }
+        ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+            background-color: #eee;
+            color: #fff;
+        }
+        ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+            background-color: #eee;
+            color: #B87A3D;
+            font-weight: bolder;
+        }
+        ul.drop-down-menu ul { /*隱藏次選單*/
+            display: none;
+        }
+
+        ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+            display: block;
+        }
+        ul.drop-down-menu ul {
+            border: 1px solid #eee;
+            position: absolute;
+            z-index: 99;
+            left: -1px;
+            top: 100%;
+            min-width: 180px;
+        }
+        .logo{
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 41%;
+        }
+        .logo img{
+            height: 100%;  
+            /* padding-left: 90px; */
+            padding: 5px 0 5px 0px ;
+            box-sizing: border-box;
+        }
+        .search_cart{
+            height: 100%;
+            display: flex;    
+            align-items: center;
+            /* position: fixed; */
+        }
+        .search_cart a img{
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .search_cart a{
+            height: 50%;
+        }
+        #search{
+            height: 40%;
+            padding: 0 20px;
+        } 
+          /* font */
+        body{
+            color:#555;
+            line-height: 1.5;
+        }
+        h1{
+            font-size: 28px;
+        }
+        h2{
+            font-size:20px;
+        }
+        /* 類別介紹 */
+        .path{
+            padding: 20px;
+        }
+        .intro_col{
+            padding: 0 0 0 10px;
+        }
+        .intro_col_txt{
+            padding: 0 10px 0 0;
+
+        }
+        .category img{
+            width: 100%;
+            vertical-align: top;
+        }
+        .category{
+            box-sizing: border-box;
+        }
+        .category_txt{
+            padding: 30px;
+            height: 100%;
+            line-height: 2;
+            background-color: antiquewhite;
+            box-sizing: border-box;
+            /* align-items: stretch; */
+        }
+        .row{
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+        /* 商品列 */
+        .product{
+            justify-content: flex-start;
+            margin-bottom: 50px;
+        }
+        .product_wrap{
+            padding:15px 15px;
+            margin-bottom:20px;
+            background-color: #eee;
+        }
+        .product_pic{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .product_pic img{
+            width: 100%;
+        }
+        h2{
+            font-size: 18px;
+        }
+        .product_wrap a{
+            text-decoration: none;
+            color: #555;
+        }
+        .price_follow_box{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .price{
+            font-size: 24px;
+            font-weight: bolder;
+            color: #B87A3D;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 15px 0 0;  
+        }
+
+        .follow{
+            width: 20px;    
+        }
+        .follow img{
+            width: 100%;
+        }
+        /* footer */
+        .footer{
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            background-color: #ecd1b6;
+            box-sizing: border-box;
+
+        }
+        .socialmedia_wrap{
+            display: flex;
+            margin: 10px 0;
+            justify-content: center;
+        }
+        .socialmedia_col{
+            width: 50px;
+            padding:0 20px;
+        }
+        .socialmedia_col img{
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 300px;
+        }
+        .shortcut-text a{
+            color: #000000;
+        }
+        .shortcut-text{
+            margin:20px 0;
+        }                
+    </style> 
+</head>
+<body>
+    <div class="container">
+        <!--head-->
+        <div class="header">
+            <ul class="drop-down-menu">
+                <li>
+                    <a href="###">
+                        <div class="menubox"><div class="menu"></div></div>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="all product.html">產品總覽</a>
+                        </li>
+                        <li>
+                            <a href="product.html">產品資訊</a>
+                        </li>
+                        <li>
+                            <a href="member.html">會員中心</a>
+                        </li>
+                        <li>
+                            <a href="article.html">一點甜專欄</a>
+                        </li>
+                        <li>
+                            <a href="about_us.html">關於我們</a>
+                        </li>
+                    </ul>
+                </li>  
+            </ul>
+            <div class="logo"><img src="pic/logo_name_official.png" alt="logo"></div>
+            <div class="search_cart">
+                <img src="pic/search_left.png" alt="search" id="search">
+                <a href="cart.html">
+                    <img src="pic/shopping-cart.png" alt="shopping-cart" href="cart.html">
+                </a>
+            </div>
+        </div>
+        <!-- body -->
+        <div class="path"><p>首頁/商品總覽/可麗露</p></div>
+        <div class="row introduce">
+            <div class="col-12 col-md-6 intro_col">
+                <div class="category">
+                    <img src="pic/carona_all.jpg">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 intro_col_txt">
+                <div class="category_txt">
+                    <h1>可麗露</h1>
+                    <p>
+                        可麗露又稱可露麗，在台灣又有天使之鈴的美名， 是一種小型的法式甜點，表層則是硬脆又厚實的褐色焦糖外殼，內部是半融化狀的蛋糕糊，散發著酒香和香草味。這種法國甜點外形小巧，約呈2英吋高、在表面有凹凸楞狀的圓柱體，像極了一個小鈴鐺，是法國西南部波爾多地區的特產，但也常常可以在巴黎糕點店(pâtisseries)找到。製作上用到雞蛋、牛奶與麵粉，會加上蘭姆酒與香草調味。糊狀的軟凍在模子裡烘培，使得可麗露有著焦糖外殼與鬆軟多孔的內裡。
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row product">
+            <div class="col-6 col-md-3">
+                <div class="product_wrap">
+                    <div class="product_pic">
+                        <img src="pic/hot_product/hot1.png">
+                    </div>
+                    <a href="product.html">
+                        <h2>太妃焦糖可麗露</h2>
+                    </a>
+                    <p>貳玖甜室</p>
+                    <div class="price_follow_box">
+                        <div class="price">
+                            <span>$90</span>
+                        </div>
+                        <div class="follow">
+                            <a href="##"><img src="pic/heartldpi.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="product_wrap">
+                    <div class="product_pic">
+                        <img src="pic/canneles.jpg">
+                    </div>
+                    <h2>大溪地香草可麗露</h2>
+                    <p>一點甜</p>
+                    <div class="price_follow_box">
+                        <div class="price">
+                            <span>$100</span>
+                        </div>
+                        <div class="follow">
+                            <a href="##"><img src="pic/heartldpi.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="product_wrap">
+                    <div class="product_pic">
+                        <img src="pic/charlot (1).jpg">
+                    </div>
+                    <h2>巧克力堅果可麗露</h2>
+                    <p>一點甜</p>
+                    <div class="price_follow_box">
+                        <div class="price">
+                            <span>$120</span>
+                        </div>
+                        <div class="follow">
+                            <a href="##"><img src="pic/heartldpi.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="product_wrap">
+                    <div class="product_pic">
+                        <img src="pic/芝麻鹹蛋黃可麗露.PNG">
+                    </div>
+                    <h2>芝麻鹹蛋黃可麗露</h2>
+                    <p>貳玖甜室</p>
+                    <div class="price_follow_box">
+                        <div class="price">
+                            <span>$90</span>
+                        </div>
+                        <div class="follow">
+                            <a href="##"><img src="pic/heartldpi.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="product_wrap">
+                    <div class="product_pic">
+                        <img src="pic/檸檬奶霜可麗露.png">
+                    </div>
+                    <h2>檸檬奶霜可麗露</h2>
+                    <p>貳玖甜室</p>
+                    <div class="price_follow_box">
+                        <div class="price">
+                            <span>$100</span>
+                        </div>
+                        <div class="follow">
+                            <a href="##"><img src="pic/heartldpi.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="product_wrap">
+                    <div class="product_pic">
+                        <img src="pic/熱紅酒可麗露.PNG">
+                    </div>
+                    <h2>熱紅酒可麗露</h2>
+                    <p>餅不甜</p>
+                    <div class="price_follow_box">
+                        <div class="price">
+                            <span>$150</span>
+                        </div>
+                        <div class="follow">
+                            <a href="##"><img src="pic/heartldpi.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="product_wrap">
+                    <div class="product_pic">
+                        <img src="pic/Ruby香緹泡芙可麗露.PNG">
+                    </div>
+                    <h2>Ruby香緹泡芙可麗露</h2>
+                    <p>餅不甜</p>
+                    <div class="price_follow_box">
+                        <div class="price">
+                            <span>$150</span>
+                        </div>
+                        <div class="follow">
+                            <a href="##"><img src="pic/heartldpi.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="product_wrap">
+                    <div class="product_pic">
+                        <img src="pic/伯爵黑糖珍珠鮮奶茶可麗露.PNG">
+                    </div>
+                    <h2>伯爵黑糖珍珠鮮奶茶可麗露</h2>
+                    <p>餅不甜</p>
+                    <div class="price_follow_box">
+                        <div class="price">
+                            <span>$130</span>
+                        </div>
+                        <div class="follow">
+                            <a href="##"><img src="pic/heartldpi.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="socialmedia_wrap">
+            <div class="socialmedia_col">
+                <a href="#"><img src="pic/facebook.png" alt="facebook"></a>
+            </div>
+            <div class="socialmedia_col">
+                <a href="#"><img src="pic/instagram.png" alt="ig"></a>
+            </div>
+            <div class="socialmedia_col">
+                <a href="#"><img src="pic/line.png" alt="line"></a>
+            </div>
+        </div>
+        <div class="shortcut-text">
+            <a href="##">關於我們</a>｜
+            <a href="##">常見問題</a>｜
+            <a href="##">購物說明</a>｜
+            <a href="##">聯繫我們</a>
+        </div>
+        <div class="copy-right">
+            <span>食品業者登錄字號：A-11212560-00123-1</span>
+            <p>Copyright © 2021 (非營利，僅供學術交流使用) All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>

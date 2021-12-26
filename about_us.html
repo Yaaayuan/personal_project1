@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一點甜 About us</title>
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        /* header */
+        .header{   
+            width: 100%;
+            height:65px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;   
+        }
+    
+        .menubox{
+            width: 50px;
+            height: 50px;
+            display: inline-block; 
+        }
+        .menu{
+            width:30px;
+            height: 6px;
+            background-color: #B87A3D;
+            box-shadow: 0px 11px 0px 0px #B87A3D,
+            0px -11px 0px 0px #B87A3D;
+            margin-top: 25px; 
+        }
+        /* menu下拉選單*/
+        ul { /* 取消ul預設的內縮及樣式 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul.drop-down-menu {
+            display: inline-block;
+            font-family: 'Open Sans', Arial, sans-serif;
+        }
+        ul.drop-down-menu li {
+            position: relative;
+            white-space: nowrap;
+        }
+        ul.drop-down-menu > li:last-child {
+            border-right: none;
+        }
+        ul.drop-down-menu > li {
+            float: left; /* 只有第一層是靠左對齊*/
+        }
+
+        ul.drop-down-menu a {
+            background-color: #fff;
+            color: #333;
+            display: block;
+            padding-left: 20px;
+            text-decoration: none;
+            line-height: 40px;
+        }
+        ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+            background-color: #eee;
+            color: #fff;
+        }
+        ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+            background-color: #eee;
+            color: #B87A3D;
+            font-weight: bolder;
+        }
+        ul.drop-down-menu ul { /*隱藏次選單*/
+            display: none;
+        }
+
+        ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+            display: block;
+        }
+        ul.drop-down-menu ul {
+            border: 1px solid #eee;
+            position: absolute;
+            z-index: 99;
+            left: -1px;
+            top: 100%;
+            min-width: 180px;
+        }
+        .logo{
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 41%;
+        }
+        .logo img{
+            height: 100%;  
+            /* padding-left: 90px; */
+            padding: 5px 0 5px 0px ;
+            box-sizing: border-box;
+        }
+        .search_cart{
+            height: 100%;
+            display: flex;    
+            align-items: center;
+            /* position: fixed; */
+        }
+        #cart{
+            height: 50%;
+           
+        }
+        #search{
+            height: 40%;
+            padding: 0 20px;
+        }
+         /* font */
+        body{
+            color:#555;
+            line-height: 1.5;
+        }
+        h1{
+            text-align: center;
+            padding-top: 20px;
+            font-size: 28px;
+        }
+        h2{
+            font-size:20px;
+        }
+        /* body */
+        .path{
+            padding: 20px;
+        }
+        .introduce{
+            padding: 20px;
+            margin: auto;
+        }
+        .intro_col{
+            padding: 0 0 0 10px;
+        }
+        .intro_col_txt{
+            padding: 0 10px 0 0;
+            width: 65%;
+            margin: auto;
+            font-size: 20px;
+        }
+        .somesweet_logo img{
+            width: 100%;
+            vertical-align: top;
+        }
+        .somesweet_logo{
+            box-sizing: border-box;
+        }
+        .somesweet_intro{
+            padding: 0 20px;
+        }
+        .row{
+            margin-bottom: 20px;
+        }
+
+        /*合作夥伴*/
+        .partner{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        .partner_wrap{
+            text-align: center;
+            margin: 30px;
+        }
+        .partner_logo img{
+            height: 80px;
+            border-radius: 100px;
+        }
+     
+        /* footer */
+        .footer{
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            background-color: #ecd1b6;
+            box-sizing: border-box;
+
+        }
+        .socialmedia_wrap{
+            display: flex;
+            margin: 10px 0;
+            justify-content: center;
+        }
+        .socialmedia_col{
+            width: 50px;
+            padding:0 20px;
+        }
+        .socialmedia_col img{
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 300px;
+        }
+        .shortcut-text a{
+            color: #000000;
+        }
+        .shortcut-text{
+            margin:20px 0;
+        }                    
+    </style>
+</head>
+<body>
+    <div class="container">
+       <!--head-->
+       <div class="header">
+        <ul class="drop-down-menu">
+            <li>
+                <a href="###">
+                    <div class="menubox"><div class="menu"></div></div>
+                </a>
+                <ul>
+                    <li>
+                        <a href="all product.html">產品總覽</a>
+                    </li>
+                    <li>
+                        <a href="product.html">產品資訊</a>
+                    </li>
+                    <li>
+                        <a href="member.html">會員中心</a>
+                    </li>
+                    <li>
+                        <a href="article.html">一點甜專欄</a>
+                    </li>
+                    <li>
+                        <a href="about_us.html">關於我們</a>
+                    </li>
+                </ul>
+            </li>  
+        </ul>
+        <div class="logo"><img src="pic/logo_name_official.png" alt="logo"></div>
+        <div class="search_cart">
+            <img src="pic/search_left.png" alt="search" id="search">
+            <a href="cart.html">
+                <img src="pic/shopping-cart.png" alt="shopping-cart" href="cart.html">
+            </a>
+        </div>
+    </div>
+    <!-- body -->
+        <div class="path"><p>首頁/關於我們</p></div>
+        <h1>關於我們</h1>
+        <div class=" introduce">
+            <div class="col-12 intro_col">
+                <div class="somesweet_logo">
+                    <img src="pic/dessert.JPG">
+                </div>
+            </div>
+            <div class="col-12  intro_col_txt">
+                <div class="somesweet_intro">
+                    <p>「一點甜」立志將所有撫慰人心的甜點分享給每一個人，期盼每位吃了「一點甜」的人們，都能夠感受到滿滿的幸福滋味，為乏味的生活帶來一點甜。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="合作夥伴">
+            <h1>合作夥伴</h1>
+        <div class="partner">
+            <div class="partner_wrap">
+                <div class="partner_logo">
+                    <img src="pic/貳玖甜室.jpg">
+                </div>
+                <p>貳玖甜室</p>
+            </div>
+            <div class="partner_wrap">
+                <div class="partner_logo">
+                    <img src="pic/一些甜點.jpg">
+                </div>
+                <p>一些甜點</p>
+            </div>
+            <div class="partner_wrap">
+                <div class="partner_logo">
+                    <img src="pic/暖暖.jpg">
+                </div>
+                <p>暖暖。法式手工甜點</p>
+            </div>
+            <div class="partner_wrap">
+                <div class="partner_logo">
+                    <img src="pic/風雨咖啡.jpg">
+                </div>
+                <p>風雨珈琲</p>
+            </div>
+            <div class="partner_wrap">
+                <div class="partner_logo">
+                    <img src="pic/餅不甜.jpg">
+                </div>
+                <p>餅不甜</p>
+            </div>
+            <div class="partner_wrap">
+                <div class="partner_logo">
+                    <img src="pic/二月森.jpg">
+                </div>
+                <p>二月森</p>
+            </div>
+            <div class="partner_wrap">
+                <div class="partner_logo">
+                    <img src="pic/希賽斯.jpg">
+                </div>
+                <p>Succès希賽斯手感糖食</p>
+            </div>
+            
+        </div>  
+        </div>
+    </div>
+    <div class="footer">
+        <div class="socialmedia_wrap">
+            <div class="socialmedia_col">
+                <a href="#"><img src="pic/facebook.png" alt="facebook"></a>
+            </div>
+            <div class="socialmedia_col">
+                <a href="#"><img src="pic/instagram.png" alt="ig"></a>
+            </div>
+            <div class="socialmedia_col">
+                <a href="#"><img src="pic/line.png" alt="line"></a>
+            </div>
+        </div>
+        <div class="shortcut-text">
+            <a href="##">關於我們</a>｜
+            <a href="##">常見問題</a>｜
+            <a href="##">購物說明</a>｜
+            <a href="##">聯繫我們</a>
+        </div>
+        <div class="copy-right">
+            <span>食品業者登錄字號：A-11212560-00123-1</span>
+            <p>Copyright © 2021 (非營利，僅供學術交流使用) All Rights Reserved</p>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

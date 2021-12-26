@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一點甜 About us</title>
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        /* header */
+        .header{   
+            width: 100%;
+            height:65px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;   
+        }
+    
+        .menubox{
+            width: 50px;
+            height: 50px;
+            display: inline-block; 
+        }
+        .menu{
+            width:30px;
+            height: 6px;
+            background-color: #B87A3D;
+            box-shadow: 0px 11px 0px 0px #B87A3D,
+            0px -11px 0px 0px #B87A3D;
+            margin-top: 25px; 
+        }
+        /* menu下拉選單*/
+        ul { /* 取消ul預設的內縮及樣式 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul.drop-down-menu {
+            display: inline-block;
+            font-family: 'Open Sans', Arial, sans-serif;
+        }
+        ul.drop-down-menu li {
+            position: relative;
+            white-space: nowrap;
+        }
+        ul.drop-down-menu > li:last-child {
+            border-right: none;
+        }
+        ul.drop-down-menu > li {
+            float: left; /* 只有第一層是靠左對齊*/
+        }
+
+        ul.drop-down-menu a {
+            background-color: #fff;
+            color: #333;
+            display: block;
+            padding-left: 20px;
+            text-decoration: none;
+            line-height: 40px;
+        }
+        ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+            background-color: #eee;
+            color: #fff;
+        }
+        ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+            background-color: #eee;
+            color: #B87A3D;
+            font-weight: bolder;
+        }
+        ul.drop-down-menu ul { /*隱藏次選單*/
+            display: none;
+        }
+
+        ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+            display: block;
+        }
+        ul.drop-down-menu ul {
+            border: 1px solid #eee;
+            position: absolute;
+            z-index: 99;
+            left: -1px;
+            top: 100%;
+            min-width: 180px;
+        }
+        .logo{
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 41%;
+        }
+        .logo img{
+            height: 100%;  
+            /* padding-left: 90px; */
+            padding: 5px 0 5px 0px ;
+            box-sizing: border-box;
+        }
+        .search_cart{
+            height: 100%;
+            display: flex;    
+            align-items: center;
+            /* position: fixed; */
+        }
+        .search_cart a img{
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .search_cart a{
+            height: 50%;
+        }
+        #search{
+            height: 40%;
+            padding: 0 20px;
+        } 
+        /* font */
+        body{
+            color:#555;
+            line-height: 1.5;
+        }
+        h1{
+            text-align: center;
+            padding-top: 20px;
+            font-size: 28px;
+        }
+        h2{
+            font-size:20px;
+        }
+        /* body */
+        .path{
+            padding: 20px;
+        }
+        h1{
+            font-size: 28px;
+            line-height: 2;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .common_row{
+            width: 1000px;
+            margin: auto;
+        }
+        .member_row{
+            display: flex;
+            justify-content: flex-start;
+            position: relative;
+            
+        }  
+        .member_formlist{
+            padding:15px;
+            background-color:#d8a068;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bolder;
+            text-align: center;
+            border-radius:15px 15px 0 0;
+            box-sizing: border-box;
+            width: 20%;
+            margin: 20px 10px 0 0;
+            box-shadow: 5px -5px 2px 0 #ddd,
+                        5px -3px 2px 0 #ddd,
+                        5px -1px 2px 0 #ddd,
+                        5px 0px 2px 0 #ddd ;
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 50px;
+        }
+        .member_acount:hover{
+            background-color: #B87A3D;
+            box-shadow: 5px 1px 2px 0 #ddd;
+                        /* 5px 3px 2px 0 #ddd,
+                        5px 1px 2px 0 #ddd,
+                        5px 0px 2px 0 #ddd; */ 
+            position:relative;
+            top: -5px;
+            height: 55px ;
+        }
+        .basic_data:hover{
+            background-color: #B87A3D;
+            box-shadow: 5px 1px 2px 0 #ddd;
+                        /* 5px 3px 2px 0 #ddd,
+                        5px 1px 2px 0 #ddd,
+                        5px 0px 2px 0 #ddd; */ 
+            position: relative;
+            top: -5px;
+            height: 55px ;
+        }
+        .like_list:hover{
+            background-color: #B87A3D;
+            box-shadow: 5px 1px 2px 0 #ddd;
+                        /* 5px 3px 2px 0 #ddd,
+                        5px 1px 2px 0 #ddd,
+                        5px 0px 2px 0 #ddd; */ 
+            position: relative;
+            top: -5px;
+            height: 55px ;
+        }
+        .order_record:hover{
+            background-color: #B87A3D;
+            box-shadow: 5px 1px 2px 0 #ddd;
+                        /* 5px 3px 2px 0 #ddd,
+                        5px 1px 2px 0 #ddd,
+                        5px 0px 2px 0 #ddd; */ 
+            position: relative;
+            top: -5px;
+            height: 55px ;
+        }
+        .member_form_txt{
+            border: 2px solid #B87A3D;
+            padding: 10px 10px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            background-color:#ffffff;
+            box-shadow: 8px 8px 2px 0 #ddd;
+            padding: 30px 0;
+        }
+        .member_form_txt form{
+            text-align: left;
+        }
+        .member_wrap{
+            padding: 20px;
+            width: 65%;
+            margin: auto;
+            display: flex;
+            box-sizing: border-box;
+            justify-content: flex-start;
+            
+        }
+        .like_item_group{
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+        .member_wrap label{
+            width: 100px;
+        }
+        .gender_item{
+            margin:0 5px ;
+        }
+        .like_item{
+            margin:0 5px ;
+        }
+        .txt_area{
+            flex-grow: 2;
+            background-color: #eee;
+            display: inline-block;
+            border: 1px  solid #aaa;
+        }
+        .btn{
+            padding: 3px 6px;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+        .btn_group{
+            text-align: center;
+        }
+        #reset_btn{
+            color: #B87A3D;
+            font-weight: bolder;
+            border:2px solid #B87A3D;
+        }
+        #submit_btn{
+            background-color: #B87A3D;
+            color: #ffffff;
+            border:2px solid #B87A3D;
+        }
+        /* footer */
+        .footer{
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            background-color: #ecd1b6;
+            box-sizing: border-box;
+
+        }
+        .socialmedia_wrap{
+            display: flex;
+            margin: 10px 0;
+            justify-content: center;
+        }
+        .socialmedia_col{
+            width: 50px;
+            padding:0 20px;
+        }
+        .socialmedia_col img{
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 300px;
+        }
+        .shortcut-text a{
+            color: #000000;
+        }
+        .shortcut-text{
+            margin:20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <!--head-->
+       <div class="header">
+        <ul class="drop-down-menu">
+            <li>
+                <a href="###">
+                    <div class="menubox"><div class="menu"></div></div>
+                </a>
+                <ul>
+                    <li>
+                        <a href="all product.html">產品總覽</a>
+                    </li>
+                    <li>
+                        <a href="product.html">產品資訊</a>
+                    </li>
+                    <li>
+                        <a href="member.html">會員中心</a>
+                    </li>
+                    <li>
+                        <a href="article.html">一點甜專欄</a>
+                    </li>
+                    <li>
+                        <a href="about_us.html">關於我們</a>
+                    </li>
+                </ul>
+            </li>  
+        </ul>
+        <div class="logo"><img src="pic/logo_name_official.png" alt="logo"></div>
+        <div class="search_cart">
+            <img src="pic/search_left.png" alt="search" id="search">
+            <a href="cart.html">
+                <img src="pic/shopping-cart.png" alt="shopping-cart" href="cart.html">
+            </a>
+        </div>
+    </div>
+        <!-- body -->
+        <div class="path"><p>首頁/會員中心</p></div>
+        <h1>會員中心</h1>
+        <div class="member_row common_row">
+            <div class="member_formlist member_acount">會員帳號</div>
+            <div class="member_formlist basic_data">基本資料</div>
+            <div class="member_formlist order_record">訂單紀錄</div>
+            <div class="member_formlist like_list">追蹤清單</div>
+        </div>
+        <div class="common_row">
+            <div class="member_form_txt">
+                <form>
+                    <div class="member_wrap">
+                        <label for="member_name">姓名：</label>
+                        <input class="txt_area" type="text" name="member_name" id="member_name">
+                    </div>
+                    <div class="member_wrap">
+                        <label for="member_tel">手機號碼：</label>
+                        <input class="txt_area" type="tel" name="member_tel" id="member_tel" maxlength="10">
+                    </div>
+        
+                    <div class="member_wrap">
+                        <label for="member_addr">地址：</label>
+                        <input class="txt_area" type="text" name="member_addr" id="member_addr">
+                    </div>
+        
+                    <div class="member_wrap">
+                        <label for="member_email">電子郵件：</label>
+                        <input class="txt_area" type="email" name="member_email" id="member_email">
+                    </div>
+        
+                    <div class="member_wrap">
+                        <label for="member_gender">性別：</label>
+                        <div class="gender_item">
+                            <input type="radio" name="gender" id="gender" value="female">女
+                        </div>
+                        <div class="gender_item">
+                            <input type="radio" name="gender" id="gender" value="male">男
+                        </div>
+                    </div>
+                    <div class="member_wrap ">
+                        <label for="like_items">喜歡的甜點：</label>
+                        <div class="like_item_group">
+                            <div class="like_item">
+                                <input type="checkbox" name="like_item" id="like_item">達克瓦茲
+                            </div>
+                            <div class="like_item">
+                                <input type="checkbox" name="like_item" id="like_item">馬卡龍
+                            </div>
+                            <div class="like_item">
+                                <input type="checkbox" name="like_item" id="like_item">派塔
+                            </div>
+                            <div class="like_item">
+                                <input type="checkbox" name="like_item" id="like_item">蛋糕
+                            </div>
+                            <div class="like_item">
+                                <input type="checkbox" name="like_item" id="like_item">可麗露
+                            </div>
+                            <div class="like_item">
+                                <input type="checkbox" name="like_item" id="like_item">餅乾
+                            </div>
+                            <div class="like_item">
+                                <input type="checkbox" name="like_item" id="like_item">其他
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_group">
+                        <input class="btn" id="reset_btn" type="reset" value="取消">
+                        <input class="btn" id="submit_btn" type="submit" value="更新">
+                    </div>
+                </form>
+            </div>
+        
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="socialmedia_wrap">
+            <div class="socialmedia_col">
+                <a href="#"><img src="pic/facebook.png" alt="facebook"></a>
+            </div>
+            <div class="socialmedia_col">
+                <a href="#"><img src="pic/instagram.png" alt="ig"></a>
+            </div>
+            <div class="socialmedia_col">
+                <a href="#"><img src="pic/line.png" alt="line"></a>
+            </div>
+        </div>
+        <div class="shortcut-text">
+            <a href="##">關於我們</a>｜
+            <a href="##">常見問題</a>｜
+            <a href="##">購物說明</a>｜
+            <a href="##">聯繫我們</a>
+        </div>
+        <div class="copy-right">
+            <span>食品業者登錄字號：A-11212560-00123-1</span>
+            <p>Copyright © 2021 (非營利，僅供學術交流使用) All Rights Reserved</p>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
