@@ -227,6 +227,13 @@
             justify-content: flex-start;
             
         }
+        .member_icon{
+            width: 200px;
+            margin: auto;
+        }
+        .member_icon img{
+            width: 100%;
+        }
         .like_item_group{
             display: flex;
             flex-wrap: wrap;
@@ -322,7 +329,9 @@
                     </ul>
                 </li>  
             </ul>
-            <div class="logo"><img src="pic/logo_name_official.png" alt="logo"></div>
+            <a href="index.html">
+                <div class="logo"><img src="pic/logo_name_official.png" alt="logo"></div>
+            </a>
             <div class="search_cart">
                 <img src="pic/search_left.png" alt="search" id="search">
                 <a href="cart.html">
@@ -342,6 +351,9 @@
         <div class="common_row">
             <div class="member_form_txt">
                 <form>
+                    <div class="member_icon">
+                        <img src="pic/user.png" alt="">
+                    </div>
                     <div class="member_wrap">
                         <label for="member_name">姓名：</label>
                         <input class="txt_area" type="text" name="member_name" id="member_name">

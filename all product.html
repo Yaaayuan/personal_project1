@@ -125,6 +125,40 @@
         h2{
             font-size:20px;
         }
+        /* 產品分類 */
+        .product_nav{
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+            margin: 30px 0;
+            /* background-color: rgb(180, 243, 245); */
+        }
+        .product_nav_item{
+            text-align: center;
+            margin: 0 30px;
+        }
+        .calilu{
+            border-bottom: #B87A3D 3px solid;
+            padding: 2px;
+            
+        }
+        .product_icon img{
+            height: 70px;
+            border-radius: 100px;
+        }
+        .product_text{
+            font-size: 16px;
+            color:#B87A3D ;
+            font-weight: bolder;
+            padding: 2px;
+        }
+        nav:hover {
+            color: #ffffff;
+            background: #B87A3D;
+        }
+        a{
+            text-decoration: none;
+        }
         /* 類別介紹 */
         .path{
             padding: 20px;
@@ -254,7 +288,9 @@
                     </ul>
                 </li>  
             </ul>
-            <div class="logo"><img src="pic/logo_name_official.png" alt="logo"></div>
+            <a href="index.html">
+                <div class="logo"><img src="pic/logo_name_official.png" alt="logo"></div>
+            </a>
             <div class="search_cart">
                 <img src="pic/search_left.png" alt="search" id="search">
                 <a href="cart.html">
@@ -264,6 +300,72 @@
         </div>
         <!-- body -->
         <div class="path"><p>首頁/商品總覽/可麗露</p></div>
+        <div class="product_nav">
+            <a href="###">
+                <div class="product_nav_item">
+                    <div class="product_icon">
+                        <img src="pic/product_icon/dakewazi.svg" alt="dakewazi">
+                    </div>
+                    <nav class="product_text">
+                        達克瓦茲
+                    </nav>
+                </div>
+            </a>
+            <a href="###">
+                <div class="product_nav_item">
+                    <div class="product_icon">
+                        <img src="pic/product_icon/macaroon.png" alt="macaroon">
+                    </div>
+                    <nav class="product_text">
+                        馬卡龍
+                    </nav>
+                </div>
+            </a>
+            <a href="###">
+                <div class="product_nav_item">
+                    <div class="product_icon">
+                        <img src="pic/product_icon/pei.svg" alt="pei">
+                    </div>
+                    <nav class="product_text">
+                        派塔
+                    </nav>
+                </div>
+            </a>
+            <a href="###">
+                <div class="product_nav_item">
+                    <div class="product_icon">
+                        <img src="pic/product_icon/cake.png" alt="cake">
+                    </div>
+                    <nav class="product_text">
+                        蛋糕
+                    </nav>
+                </div>
+            </a>
+            <div class="product_nav_item">
+                <div class="product_icon">
+                    <img src="pic/product_icon/caliiu.svg" alt="calilu">
+                </div>
+                <nav class="product_text calilu">
+                    可麗露
+                </nav>
+            </div>
+            <div class="product_nav_item">
+                <div class="product_icon">
+                    <img src="pic/product_icon/cookie.png" alt="cookie">
+                </div>
+                <nav class="product_text">
+                    餅乾
+                </nav>
+            </div>
+            <div class="product_nav_item">
+                <div class="product_icon">
+                    <img src="pic/product_icon/else.png" alt="else">
+                </div>
+                <nav class="product_text">
+                    其他
+                </nav>
+            </div>
+        </div>
         <div class="row introduce">
             <div class="col-12 col-md-6 intro_col">
                 <div class="category">
