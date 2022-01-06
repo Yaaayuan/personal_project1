@@ -4,9 +4,12 @@
 }
 /* header */
 .container{
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
-    /* position: relative; */
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    /* font-family: 'Noto Sans TC', sans-serif; */
 }
 .header{
     width: 100%;
@@ -21,8 +24,7 @@
     background-color: #ffffff;
     z-index: 20;
     padding:0 10px 0 0;
-    box-sizing: border-box; 
-      
+    box-sizing: border-box;   
 }
 .menubox{
     width: 50px;
@@ -36,6 +38,7 @@
     box-shadow: 0px 11px 0px 0px #B87A3D,
     0px -11px 0px 0px #B87A3D;
     margin-top: 25px; 
+    margin-left: 10px;
 }
 /* menu下拉選單*/
 ul { /* 取消ul預設的內縮及樣式 */
@@ -59,17 +62,14 @@ ul.drop-down-menu > li {
 }
 
  ul.drop-down-menu a {
-    background-color: #fff;
+    background-color: #ffffff;
     color: #333;
     display: block;
-    padding-left: 20px;
+    padding: 0 10px;
     text-decoration: none;
     line-height: 40px;
 }
-ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
-    background-color: #eee;
-    color: #fff;
-}
+
 ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
     background-color: #eee;
     color: #B87A3D;
@@ -106,9 +106,8 @@ ul.drop-down-menu ul {
     height: 100%;
     display: flex;    
     align-items: center;
-    /* position: fixed; */
 }
-.login-btn{
+.login_btn{
     height: 50%;
     background-color:#B87A3D ;
     color: #ffffff;
@@ -122,6 +121,7 @@ ul.drop-down-menu ul {
 .login_cart a img{
     height: 100%;
     box-sizing: border-box;
+    padding:0 10px;
 }
 .login_cart a{
     height: 50%;
@@ -132,7 +132,12 @@ ul.drop-down-menu ul {
     display: inline-flex;
     justify-content: center;
     margin: 50px 0;
+    
     /* background-color: rgb(180, 243, 245); */
+}
+nav{
+    border-bottom: transparent 3px solid;
+    padding: 2px;
 }
 .product_nav_item{
     text-align: center;
@@ -147,9 +152,11 @@ ul.drop-down-menu ul {
     color:#B87A3D ;
     font-weight: bolder;
 }
-nav:hover {
+nav:hover{
     color: #ffffff;
     background: #B87A3D;
+    border-bottom: #B87A3D 3px solid;
+    padding: 2px;
 }
 
 /* 搜尋列 */
@@ -207,6 +214,7 @@ h1{
     width: 100%;
     vertical-align: top;
 }
+
 .issue_box{
     width: 350px;
     position: relative;
@@ -235,15 +243,23 @@ h1{
 .partner{
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 .partner_wrap{
     text-align: center;
-    margin: 30px;
+    margin:0 25px;
+}
+.partner_logo{
+    width:80px;
+    margin: auto;
 }
 .partner_logo img{
-    height: 80px;
+    width: 100%;
     border-radius: 100px;
+    box-sizing: border-box;
+}
+.border img{
+    border: #aaa solid 1px;
 }
 /* dm */
 .dm{
@@ -295,41 +311,56 @@ h2{
 .follow img{
     width: 100%;
 }
+.store{
+    display: flex;
+    margin: 5px 0;
+
+}
+.store_icon{
+    width: 22px;
+    margin-right: 10px;
+    box-sizing:border-box;
+}
+.store_icon img{
+    width: 100%;
+}
 /* 專欄 */
 .article{
+    width: 90%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin: 0 auto 50px auto;
+    
 }
-.article_wrap:first-child{
-    padding-right: 30px;
-}
+
 .article_wrap{
     display: flex;
     width: 50%;
-    /* padding: 10px;  */
+    padding: 10px; 
     box-sizing: border-box; 
+    justify-content: space-between;
 }
 
 .article_pic{
-    width: 300px;
+    width: 250px;
+    height: 230px;
     /* background-color: cadetblue; */
 }
 .article_pic img{
-    width: 100%;
-    /* padding: 0 10px; */
+    height: 100%;
     box-sizing: border-box;
     vertical-align: top;
+    /* overflow: hidden; */
 }
 .article_txt{
-    width: 330px;
+    width: 100%;
     padding: 20px;
     background-color: #eee;  
     line-height: 23px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
 }
 .article_txt h2{
     margin-bottom: 5px;

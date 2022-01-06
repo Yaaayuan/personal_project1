@@ -1,0 +1,185 @@
+/* header */
+.header{   
+    width: 100%;
+    height:65px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 100;
+    padding:0 10px 0 0;
+    box-sizing: border-box;
+}
+.menubox{
+    width: 50px;
+    height: 50px;
+    display: inline-block; 
+}
+.menu{
+    width:30px;
+    height: 6px;
+    background-color: #B87A3D;
+    box-shadow: 0px 11px 0px 0px #B87A3D,
+    0px -11px 0px 0px #B87A3D;
+    margin-top: 25px; 
+}
+.logo{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 41%;
+}
+.logo img{
+    height: 100%;  
+    padding: 5px 0 5px 0px ;
+    box-sizing: border-box;
+}
+.search_cart{
+    height: 100%;
+    display: flex;    
+    align-items: center;
+}
+.search_cart a img{
+    height: 100%;
+    box-sizing: border-box;
+}
+.search_cart a{
+    height: 50%;
+}
+#search{
+    height: 40%;
+    padding: 0 20px;
+} 
+/* menu下拉選單*/
+ul {               /* 取消ul預設的內縮及樣式 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.drop-down-menu {
+    display: inline-block;
+}
+ul.drop-down-menu li {
+    position: relative;
+    white-space: nowrap;
+}
+ul.drop-down-menu > li:last-child {
+    border-right: none;
+}
+ul.drop-down-menu > li {    /* 只有第一層是靠左對齊*/
+    float: left;   
+} 
+ul.second-drop-down-menu a {
+    background-color: #fff;
+    color: #333;
+    display: block;
+    padding-left: 20px;
+    text-decoration: none;
+    line-height: 40px;
+}
+ul.second-drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+    background-color: #eee;
+    color: #fff;
+}
+ul.second-drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+    background-color: #eee;
+    color: #B87A3D;
+    font-weight: bolder;
+}
+ul.drop-down-menu ul { /*隱藏次選單*/
+    display: none;
+}
+
+ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+    display: block;
+}
+ul.drop-down-menu ul {
+    border: 1px solid #eee;
+    position: absolute;
+    z-index: 99;
+    left: -1px;
+    top: 100%;
+    min-width: 180px;
+}
+
+/* font */
+body{
+    font-family:思源黑體,微軟正黑體;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color:#555;
+    line-height: 1.5;
+}
+h1{
+    font-size: 28px;
+    text-align: center;
+}
+h2{
+    font-size:20px;
+}
+
+
+
+/* body */
+.path{
+    padding: 20px;
+}
+.footer{
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    background-color: #ecd1b6;
+    box-sizing: border-box;
+}
+.socialmedia_wrap{
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+}
+.socialmedia_col{
+    width: 50px;
+    padding:0 20px;
+}
+.socialmedia_col img{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 300px;
+}
+.shortcut-text a{
+    color: #000000;
+}
+.shortcut-text{
+    margin:20px 0;
+}
+
+/* footer */
+.footer{
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    background-color: #ecd1b6;
+    box-sizing: border-box;
+}
+.socialmedia_wrap{
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+}
+.socialmedia_col{
+    width: 50px;
+    padding:0 20px;
+}
+.socialmedia_col img{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 300px;
+}
+.shortcut-text a{
+    color: #000000;
+}
+.shortcut-text{
+    margin:20px 0;
+}
