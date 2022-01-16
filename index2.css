@@ -159,7 +159,6 @@ h2{
     height: 60%;
 }
 /* 產品分類 */
-
 .product_nav_container{
     width: 320px;
     display: flex;
@@ -198,7 +197,6 @@ h2{
     left:0px;
     width: 100%;
     transition:left 1s;
-    z-index: -1;
     display: flex;
     justify-content: flex-start;
 }
@@ -206,8 +204,6 @@ h2{
     margin:7px;
     width: 44px;
     text-align: center;
-
-
 }
 .product_icon{
     width: 44x;
@@ -356,7 +352,8 @@ h1{
 .hot_product_wrap, .new_product_wrap{
     width: calc(50% - 20px);
     margin:5px 10px;
-
+    padding:10px;
+    background-color: #eee;
     box-sizing: border-box; 
 }
 .product_pic{
@@ -376,7 +373,6 @@ h1{
     font-size: 20px;
     font-weight: bolder;
     color: #B87A3D;
-    font-family: Arial, Helvetica, sans-serif;
     padding: 10px 0 0;  
 }
 .follow{
@@ -476,9 +472,6 @@ a{
     margin:20px 0;
 }
 /* lg 平板橫up*/
-/* @media screen and (min-width:992px) {
-
-} */
 /* xl 桌機up*/
 @media screen and (min-width:992px) {
     /* font */
@@ -523,7 +516,7 @@ a{
     #menu-check:checked ~ .header .header_container .hb:before{
         top: 23px;
         box-shadow: 0px 17px 0px #b87b3d00;
-    } 
+    }    
     #menu-check:checked ~ .header .header_container .hb:after{
         bottom: 23px;
     }
@@ -545,7 +538,7 @@ a{
     }
 
     /* 產品分類 */
-    
+
     .product_nav_container{
         max-width:1200px;
         width: 80%;
@@ -563,8 +556,8 @@ a{
         position:relative;
         width: 85%;
         height:120px;
-        z-index: -1;
         text-align: center;
+        overflow: visible;
     }
     .wrap{
         justify-content: space-around;
@@ -572,8 +565,14 @@ a{
     }
     .product_item{
         width: 70px;
-
+        border-bottom:transparent 3px solid;
+        padding: 2px;
     }
+    .product_item:hover{
+        /* color: #ffffff;
+        background: #B87A3D; */
+        border-bottom: #B87A3D 3px solid;
+    } 
     .product_icon{
         width: 70px;
         height: 70px;
@@ -583,15 +582,8 @@ a{
     .product_item p{
         font-size: 16px; 
         color:#B87A3D ;
-        border-bottom: transparent 3px solid;
-        padding: 2px;
     }
-    .product_item p :hover{
-        color: #ffffff;
-        background: #B87A3D;
-        border-bottom: #B87A3D 3px solid;
-        padding: 2px;
-    } 
+
     /* 搜尋列 */
     .search_row{
         margin-bottom: 60px;

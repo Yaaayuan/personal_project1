@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+      }
+
+      body {
+        /* background: #eee; */
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        /* height: 100%; */
+      }
+
+      .swiper-slide {
+         text-align: center;
+         /* width: 50%; */
+         width: 312.995px;
+         margin-right: 20px;
+        /*background: #fff; */
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        /* height: 100%; */
+        object-fit: cover;
+      }
+
+      /* 其他推薦 */
+      .other_pd {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin:20px 0;
+        }
+        .hot_product_wrap{
+            width: 100%;
+            padding:15px 15px;
+            margin-bottom:20px;
+            background-color: #eee;
+            margin: 5px;
+            box-sizing: border-box; 
+        }
+        .other_product_pic{
+            width: 100%;
+        }
+        .other_product_pic img{
+            width: 100%;
+        }
+
+        .other_pd_price{
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 15px 0 0;  
+        }
+        .price_follow_box{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .follow{
+            width: 20px;    
+        }
+        .follow img{
+            width: 100%;
+        }
+        .store{
+            display: flex;
+            flex-direction: row;
+            margin: 5px 0;
+            align-items: center;
+        }
+        .store_icon{
+            width: 16px;
+            margin-right: 5px;
+            box-sizing:border-box;
+        }
+        .store_icon img{
+            width: 100%;    
+            vertical-align: middle;
+        }
+        .store_name a{
+            color: #555;
+        }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="hot_product_wrap">
+                <div class="other_product_pic">
+                    <img src="pic/hot_product/hot5.png">
+                </div>
+                <h2>糖漬橙片利口酒糖霜磅蛋糕</h2>
+                <div class="store">
+                    <div class="store_icon">
+                        <img src="pic/shop_b.png" alt="">
+                    </div>
+                    <div class="store_name">
+                        <a href="###">一些甜點</a>
+                    </div>
+                </div>
+                <div class="price_follow_box">
+                    <div class="other_pd_price">
+                        <span>$150</span>
+                    </div>
+                    <div class="follow">
+                        <a href="##"><img src="pic/heartldpi.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="hot_product_wrap">
+                <div class="other_product_pic">
+                    <img src="pic/hot_product/hot5.png">
+                </div>
+                <h2>糖漬橙片利口酒糖霜磅蛋糕</h2>
+                <div class="store">
+                    <div class="store_icon">
+                        <img src="pic/shop_b.png" alt="">
+                    </div>
+                    <div class="store_name">
+                        <a href="###">一些甜點</a>
+                    </div>
+                </div>
+                <div class="price_follow_box">
+                    <div class="other_pd_price">
+                        <span>$150</span>
+                    </div>
+                    <div class="follow">
+                        <a href="##"><img src="pic/heartldpi.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="hot_product_wrap">
+                <div class="other_product_pic">
+                    <img src="pic/hot_product/hot5.png">
+                </div>
+                <h2>糖漬橙片利口酒糖霜磅蛋糕</h2>
+                <div class="store">
+                    <div class="store_icon">
+                        <img src="pic/shop_b.png" alt="">
+                    </div>
+                    <div class="store_name">
+                        <a href="###">一些甜點</a>
+                    </div>
+                </div>
+                <div class="price_follow_box">
+                    <div class="other_pd_price">
+                        <span>$150</span>
+                    </div>
+                    <div class="follow">
+                        <a href="##"><img src="pic/heartldpi.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="hot_product_wrap">
+                <div class="other_product_pic">
+                    <img src="pic/hot_product/hot5.png">
+                </div>
+                <h2>糖漬橙片利口酒糖霜磅蛋糕</h2>
+                <div class="store">
+                    <div class="store_icon">
+                        <img src="pic/shop_b.png" alt="">
+                    </div>
+                    <div class="store_name">
+                        <a href="###">一些甜點</a>
+                    </div>
+                </div>
+                <div class="price_follow_box">
+                    <div class="other_pd_price">
+                        <span>$150</span>
+                    </div>
+                    <div class="follow">
+                        <a href="##"><img src="pic/heartldpi.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        slidesPerGroup: 2,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
